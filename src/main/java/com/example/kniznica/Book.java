@@ -8,14 +8,14 @@ public class Book {
 
     private int pages;
 
-    private boolean status;
+    private boolean borrow;
 
-    public Book (String name, String authorName, int pages, boolean status) {
+    public Book (String name, String authorName, int pages, boolean borrow) {
         super();
         this.name = name;
         this.authorName = authorName;
         this.pages = pages;
-        this.status = status;
+        this.borrow = borrow;
     }
 
     public String getName() {
@@ -42,15 +42,15 @@ public class Book {
         this.pages = pages ;
     }
 
-    public boolean getStatus() {
-        return status;
+    public boolean getBorrow() {
+        return borrow;
     }
 
-    public void setStatus(boolean status) {
-        this.status = status;
+    public void setBorrow(boolean borrow) {
+        this.borrow = borrow;
     }
     
 
-    
+
     
 }
