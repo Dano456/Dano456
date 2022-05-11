@@ -19,6 +19,9 @@ public class books {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "pages")
+    private int pages;
+
     public Long getId(){
         return id;
     }
@@ -27,13 +30,20 @@ public class books {
         this.id=id;
     }
 
-
     public String getName(){
         return name;
     }
 
     public void setName(String name){
         this.name=name;
+    }
+
+    public int getPages(){
+        return pages;
+    }
+
+    public void setPages(int pages){
+        this.pages=pages;
     }
 
 }

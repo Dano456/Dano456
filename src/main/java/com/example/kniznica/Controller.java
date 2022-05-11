@@ -16,14 +16,14 @@ public class Controller {
     
      @Autowired
      booksService booksService;
-     @RequestMapping("hello")
+     @RequestMapping("creator")
 
      public String hello() {
  
-         return"Ahoooooj!";
+         return"Môj zhotoviteľ je Daar :-) ";
  
     }
-    
+
     @GetMapping("getbooks")
 
     public List<books> getBook() {
