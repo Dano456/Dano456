@@ -20,5 +20,11 @@ public class booksService {
       return bookRepository.findAll();
 
    }
+
+   public books saveBooks(books books) {
+
+      return bookRepository.save(books);
+
+   }
     
 }

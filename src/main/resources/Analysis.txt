@@ -9,4 +9,22 @@ Je to appka na spravu knih u mna doma.
 Mala by mat moznost prihlasovania sa...pod roznymi uctami...
 napr: User, admin, atd....
 Pouvazujem aj nad kontejnerizaciou (Docker)
+Predstavujem si zatial ako jednoduche okno v ktorom bude nazov knihy,
+obrazok, meno autora, pocet stran, hodnotenie(vlastnymi slovami), a 
+ci je pozicana alebo nie
+Pozadie moze byt jemne modre, samotna karta bude windowsseda, ale 
+hore by som mal rad pruh rozlicnej farby....na zaklade tej farby by som vedel
+
+o aky zaner sa jedna:   cervena: sci-fi
+                        oranzova: fantasy
+                        modra: romany
+                        zelena: historicka
+                        zlta: sportove
+                        fialova: nabozenske
+                        biela: nezaradene
+
+To je len taky prvy pokus
+
+Vyskusaj v postmanovy vytvorit novy zapis do databazy.
+
 
