@@ -1,26 +1,38 @@
 package com.example.kniznica;
 
-import org.springframework.web.bind.annotation.RestController;
+import java.util.List;
+
+import com.example.kniznica.entities.books;
+import com.example.kniznica.services.booksService;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-
+@RequestMapping("api/")
 public class Controller {
     
-    @RequestMapping("/hello")
+     @Autowired
+     booksService booksService;
+     @RequestMapping("hello")
 
-    public String hello() {
+     public String hello() {
  
          return"Ahoooooj!";
  
     }
- 
- @RequestMapping("/book")
- 
-    public Book getBook() {
- 
-      return new Book("Duna", "Frank Herbert", 523, true);
+    
+    @GetMapping("getbooks")
+
+    public List<books> getBook() {
+
+         return booksService.getBooks();
  
     }
-    
+ 
 }
+
+    
+
