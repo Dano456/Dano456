@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("api/")
+//@RequestMapping("api/")
 public class Controller {
     
      @Autowired
@@ -22,7 +22,7 @@ public class Controller {
 
      public String hello() {
  
-         return"Môj zhotoviteľ je Daar :-) ";
+         return "Môj zhotoviteľ je Daar :-) ";
  
     }
 
@@ -38,6 +38,13 @@ public class Controller {
     public books saveBooks(@RequestBody books books) {
           return booksService.saveBooks(books);
          
+    }
+
+    @RequestMapping("**")
+
+    public String nothing() {
+
+          return "You have entered an incorrect URL !!!";
     }
  
 }

@@ -21,7 +21,11 @@ public class books {
 
     @Column(name = "pages")
     private int pages;
-
+    /**
+    @Column(name = "borrow")
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    private boolean borrow;
+    */
     public Long getId(){
         return id;
     }
@@ -45,5 +49,14 @@ public class books {
     public void setPages(int pages){
         this.pages=pages;
     }
+    /** 
+    public boolean getBorrow(){
+        return borrow;
+    }
+
+    public void setBorrow(boolean borrow){
+        this.borrow=borrow;
+    }
+    */
 
 }
