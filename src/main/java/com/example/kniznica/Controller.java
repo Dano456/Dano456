@@ -18,6 +18,7 @@ public class Controller {
     
      @Autowired
      booksService booksService;
+     /** 
      @RequestMapping("creator")
 
      public String hello() {
@@ -25,6 +26,7 @@ public class Controller {
          return "Môj zhotoviteľ je Daar :-) ";
  
     }
+    */
 
     @GetMapping("getbooks")
 
