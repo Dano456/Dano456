@@ -1,11 +1,6 @@
 package com.example.kniznica.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name="books")
@@ -18,10 +13,7 @@ public class books {
 
     @Column(name = "name")
     private String name;
-/** 
-    @Column(name = "authorName")
-    private String authorName;
-*/
+
     @Column(name = "pages")
     private int pages;
     
@@ -29,17 +21,20 @@ public class books {
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private boolean borrow;
 
+    @Column(name = "author_name")
+    private String author_name;
+
     public books () {
 
     }
 
-    public books(int id, String name, Integer pages, boolean borrow){
+    public books(int id, String name, Integer pages, boolean borrow, String author_name){
         super();
         this.id=id;
         this.name=name;
-       // this.authorName=authorName;
         this.pages=pages;
         this.borrow=borrow;
+        this.author_name=author_name;
     }
     
     public int getId(){
@@ -57,15 +52,15 @@ public class books {
     public void setName(String name){
         this.name=name;
     }
-/** 
+ 
     public String getAuthorName(){
-        return authorName;
+        return author_name;
     }
 
-    public void setAuthorName(String authorName){
-        this.authorName=authorName;
+    public void setAuthorName(String author_name){
+        this.author_name=author_name;
     }
-*/
+
     public int getPages(){
         return pages;
     }

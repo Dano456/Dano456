@@ -1,34 +1,18 @@
 package com.example.kniznica;
 
 import java.util.List;
-
 import com.example.kniznica.entities.books;
 import com.example.kniznica.services.booksService;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 
 @RestController
-//@RequestMapping("api/")
+@RequestMapping("api/")
 public class Controller {
     
      @Autowired
      private booksService booksService;
-     /** 
-     @RequestMapping("creator")
-
-     public String hello() {
- 
-         return "Môj zhotoviteľ je Daar :-) ";
- 
-    }
-    */
 
     @GetMapping("getbooks")
 
@@ -37,15 +21,15 @@ public class Controller {
          return booksService.getAllBooks();
  
     }
-/** 
+ 
     @GetMapping("getbooks/{id}")
 
-    public books getBook(@PathVariable Integer id) {
+    public books getBook(@PathVariable Long id) {
 
          return booksService.getBook(id);
  
     }
-*/
+
     @PostMapping("addbook")
     public books saveBooks(@RequestBody books books) {
           return booksService.saveBooks(books);
@@ -56,6 +40,13 @@ public class Controller {
 
     public void updateBooks(@PathVariable Long id, @RequestBody books books) {
       booksService.updateBooks(id,books);
+          
+    }
+
+    @DeleteMapping(value = "/api/deletebook/{id}")
+
+    public void deleteBooks(@PathVariable Long id) {
+      booksService.deleteBooks(id);
           
     }
 

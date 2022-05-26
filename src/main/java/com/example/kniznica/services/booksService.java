@@ -1,6 +1,8 @@
 package com.example.kniznica.services;
 
 import java.util.List;
+import java.util.Optional;
+
 import com.example.kniznica.entities.books;
 import com.example.kniznica.repositories.bookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,13 +22,13 @@ public class booksService {
       return bookRepository.findAll();
 
    }
-/** 
-   public books getBook(Integer id){
+ 
+   public books getBook(Long id){
 
-      return 
+      return bookRepository.getById(id);
 
    }
-*/   
+   
    public books saveBooks(books books) {
 
       return bookRepository.save(books);
@@ -36,6 +38,12 @@ public class booksService {
    public void updateBooks(Long id, books books) {
 
        bookRepository.save(books);
+
+   }
+
+   public void deleteBooks(Long id) {
+
+       bookRepository.deleteById(id);
 
    }
     
