@@ -15,15 +15,27 @@ public class booksService {
 
    }
 
-   public List<books> getBooks(){
+   public List<books> getAllBooks(){
 
       return bookRepository.findAll();
 
    }
-   
+/** 
+   public books getBook(Integer id){
+
+      return 
+
+   }
+*/   
    public books saveBooks(books books) {
 
       return bookRepository.save(books);
+
+   }
+
+   public void updateBooks(Long id, books books) {
+
+       bookRepository.save(books);
 
    }
     
