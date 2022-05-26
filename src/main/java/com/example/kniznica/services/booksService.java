@@ -1,7 +1,6 @@
 package com.example.kniznica.services;
 
 import java.util.List;
-import java.util.Optional;
 
 import com.example.kniznica.entities.books;
 import com.example.kniznica.repositories.bookRepository;
