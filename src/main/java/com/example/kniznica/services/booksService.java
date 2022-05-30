@@ -10,7 +10,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class booksService {
 
-   @Autowired bookRepository bookRepository;
+   @Autowired 
+   bookRepository bookRepository;
 
    public booksService(){
 
@@ -28,9 +29,9 @@ public class booksService {
 
    }
    
-   public books saveBooks(books books) {
+   public void saveBooks(books books) {
 
-      return bookRepository.save(books);
+       bookRepository.save(books);
 
    }
 

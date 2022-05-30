@@ -2,17 +2,22 @@ package com.example.kniznica;
 
 import java.util.List;
 import com.example.kniznica.entities.books;
+import com.example.kniznica.repositories.bookRepository;
 import com.example.kniznica.services.booksService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 
 @RestController
-@RequestMapping("api/")
+//@RequestMapping("api/")
+@CrossOrigin
 public class Controller {
     
      @Autowired
-     private booksService booksService;
+     booksService booksService;
+
+     @Autowired
+     bookRepository bookRepository;
 
     @GetMapping("getbooks")
 
@@ -31,8 +36,8 @@ public class Controller {
     }
 
     @PostMapping("addbook")
-    public books saveBooks(@RequestBody books books) {
-          return booksService.saveBooks(books);
+    public void saveBooks(@RequestBody books books) {
+           booksService.saveBooks(books);
          
     }
 
@@ -43,7 +48,7 @@ public class Controller {
           
     }
 
-    @DeleteMapping(value = "/api/deletebook/{id}")
+    @DeleteMapping(value = "deletebook/{id}")
 
     public void deleteBooks(@PathVariable Long id) {
       booksService.deleteBooks(id);
