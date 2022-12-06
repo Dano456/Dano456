@@ -1,6 +1,6 @@
 package com.example.kniznica.entities;
 
-import java.sql.Date;
+
 import javax.persistence.*;
 
 @Entity
@@ -9,7 +9,7 @@ public class books {
 
     @Id
     @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(name = "name")
@@ -19,14 +19,10 @@ public class books {
     private int pages;
     
     @Column(name = "borrow")
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
     private boolean borrow;
 
     @Column(name = "author_name")
     private String author_name;
-
-    @Column(name = "borrow_to")
-    private Date borrow_to;
 
     public books () {
 
@@ -40,16 +36,7 @@ public class books {
         this.borrow=borrow;
         this.author_name=author_name;
     }
-
-    public books(Long id, String name, Integer pages, boolean borrow, String author_name, Date borrow_to){
-        super();
-        this.id=id;
-        this.name=name;
-        this.pages=pages;
-        this.borrow=borrow;
-        this.author_name=author_name;
-        this.borrow_to=borrow_to;
-    }
+ 
     
     public Long getId(){
         return id;
@@ -90,14 +77,5 @@ public class books {
     public void setBorrow(boolean borrow){
         this.borrow=borrow;
     }
-
-    public Date getBorrowTo(){
-        return borrow_to;
-    }
-
-    public void setBorrowTo(Date borrow_to){
-        this.borrow_to=borrow_to;
-    }
-    
 
 }

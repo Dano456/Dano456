@@ -5,6 +5,8 @@ Backend: SpringBoot
 Databaza: PosgresSQL
 Repozitar: https://github.com/Dano456/Dano456
 
+spravit error ak zada zle id t.j. viac ako realne je knih
+
 Je to appka na spravu knih u mna doma.
 Mala by mat moznost prihlasovania sa...pod roznymi uctami...
 napr: User, admin, atd....
@@ -28,3 +30,5 @@ To je len taky prvy pokus
 Vyskusaj v postmanovy vytvorit novy zapis do databazy.
 
 
+Usecase chyba: chcem hladat knihu podla ......(dopln)
+ukladat knihu iba nazov....

@@ -29,8 +29,11 @@ public class booksService {
 
    }
    
-   public void saveBooks(books books) {
-
+   public void saveBook(books books) {
+/**
+ * saveBook - 
+ * (Book book)
+ */
        bookRepository.save(books);
 
    }
