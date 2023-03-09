@@ -32,3 +32,11 @@ Vyskusaj v postmanovy vytvorit novy zapis do databazy.
 
 Usecase chyba: chcem hladat knihu podla ......(dopln)
 ukladat knihu iba nazov....
+
+to do list vo volnom case....
+
+najprv osetrit, ze ked zadam zle id knihy...napriklad mam knihy od 1 do 6 a zadam 9...aby hodilo nejaku zmysluplnu hlasku
+
+tak skusit prejst na FE. kniha ako karta napr...skusim Vue rozbehat...alebo React....
+
+a tak
